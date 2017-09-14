@@ -9,7 +9,7 @@ post_excerpt: >
   equipped, BH makes Raspberry Pi 2/3
   alive to the real world.
 layout: product
-permalink: https://bithollow.com/shop/bh-pilot/
+permalink: https://bithollow.com/product/bh-pilot/
 published: true
 post_date: 2017-09-02 21:53:40
 ---
@@ -22,7 +22,7 @@ BH Pilot is a HAT of Raspberry Pi 2/3, together they are capable of piloting dro
 - Ardupilot support.
 - Multi-purpose sensor cap which can work with various DIY projects, not limited to Raspberry Pi.
 
-** Check the documentation of [Users](http://bithollow.github.io/documents/users/) and [Developers](http://bithollow.github.io/documents/developers/) for more detail. **
+**Check the documentation of [Users](http://bithollow.github.io/documents/users/) and [Developers](http://bithollow.github.io/documents/developers/) for more detail.**
 
 #### Hardware spec ####
 - MPU9250 * 1
