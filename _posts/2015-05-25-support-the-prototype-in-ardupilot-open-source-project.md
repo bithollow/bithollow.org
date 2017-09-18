@@ -21,17 +21,13 @@ These days, we forked ardupilot open source project from [upstream](https://gith
 
 MPU6050 attached to I2C, seems we could improve the I2C performance.
 
-<script>
-document.write("
 <div class="geoip geoip-show-CN">
 [arve url="https://v.youku.com/v_show/id_XMzAzMDI0NzUwMA==.html?spm=a2hzp.8244740.0.0#paction"]
-Gggggg</div>
+</div>
 
 <div class="geoip-hide geoip-hide-CN">
 [arve url="https://vimeo.com/234263663"]
 </div>
-");
-</script>
 
 ---
 
