@@ -30,7 +30,7 @@ document.write("
 <div class="geoip-hide geoip-hide-CN">
 [arve url="https://vimeo.com/234263663"]
 </div>
-")
+");
 </script>
 
 ---
