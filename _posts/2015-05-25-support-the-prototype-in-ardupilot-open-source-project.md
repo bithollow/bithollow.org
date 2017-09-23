@@ -35,6 +35,8 @@ MPU6050 attached to I2C, seems we could improve the I2C performance.
 
 Only one ESC single ware was connected, just precaution!
 
+[caption]aws[/caption]
+
 <div class="geoip geoip-show-CN">
 [arve url="https://v.youku.com/v_show/id_XMzAzMDI1MDgxNg==.html?spm=a2hzp.8244740.0.0"]
 </div>
