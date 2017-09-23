@@ -17,21 +17,13 @@ However, currently most of the control boards are MCU based, limited computing p
 
 These days, we forked ardupilot open source project from [upstream](https://github.com/ardupilot), added the support for our prototype, unbelievable, just a few hours of efforts, the system is up and running!
 
-[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI0NzUwMA==.html?spm=a2hzp.8244740.0.0#paction"]
-
-[bithollow_video locale="Global" url="https://vimeo.com/234263663"]
-
 ### APM Planner GCS connected ###
 
 MPU6050 attached to I2C, seems we could improve the I2C performance.
 
-<div class="geoip geoip-show-CN">
-[arve url="https://v.youku.com/v_show/id_XMzAzMDI0NzUwMA==.html?spm=a2hzp.8244740.0.0#paction"]
-</div>
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI0NzUwMA==.html?spm=a2hzp.8244740.0.0#paction"]
 
-<div class="geoip-hide geoip-hide-CN">
-[arve url="https://vimeo.com/234263663"]
-</div>
+[bithollow_video locale="Global" url="https://vimeo.com/234263663"]
 
 ---
 
