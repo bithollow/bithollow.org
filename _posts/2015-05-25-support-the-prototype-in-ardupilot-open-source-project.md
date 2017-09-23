@@ -31,13 +31,9 @@ MPU6050 attached to I2C, seems we could improve the I2C performance.
 
 Only one ESC single ware was connected, just precaution!
 
-<div class="geoip geoip-show-CN">
-[arve url="https://v.youku.com/v_show/id_XMzAzMDI1MDgxNg==.html?spm=a2hzp.8244740.0.0"]
-</div>
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI1MDgxNg==.html?spm=a2hzp.8244740.0.0"]
 
-<div class="geoip-hide geoip-hide-CN">
-[arve url="https://vimeo.com/234263859"]
-</div>
+[bithollow_video locale="Global" url="https://vimeo.com/234263859"]
 
 ---
 
@@ -45,12 +41,8 @@ Only one ESC single ware was connected, just precaution!
 
 See, ardupilot stabilization mode is on:)
 
-<div class="geoip geoip-show-CN">
-[arve url="https://v.youku.com/v_show/id_XMzAzMDI1MTY3Mg==.html?spm=a2hzp.8244740.0.0"]
-</div>
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI1MTY3Mg==.html?spm=a2hzp.8244740.0.0"]
 
-<div class="geoip-hide geoip-hide-CN">
-[arve url="https://vimeo.com/234263896"]
-</div>
+[bithollow_video locale="Global" url="https://vimeo.com/234263896"]
 
 ---
