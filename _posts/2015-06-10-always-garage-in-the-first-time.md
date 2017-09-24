@@ -1,6 +1,6 @@
 ---
 ID: 576
-post_title: Always garage in the first time
+post_title: Always garage for the first time
 author: bithollow
 post_excerpt: ""
 layout: post
@@ -19,7 +19,7 @@ I configured the prototype quad-copter with APM Planner already, just leave it w
 
 ### Hovering with default PID ###
 
-Good, it is actually flying, although the monment is short, but flying. I feel awesome, hours of modifying ardupilot, Dupont wires, bread boards, breakout boards, sensors etc.. I didn't expect all those things work together the first time can bring the quad-copter into the air. It's in the air though, in front of me, good, isn't it?
+Good, it is actually flying, although the monment is short, but flying. I feel awesome, hours of modifying ardupilot, Dupont wires, bread boards, breakout boards, sensors etc.. I didn't expect all those things work together at the first time can bring the quad-copter into the air. It's in the air though, in front of me, good, isn't it?
 
 [bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzA0MTY5MDkyOA==.html?spm=a2h3j.8428770.3416059.1"]
 
