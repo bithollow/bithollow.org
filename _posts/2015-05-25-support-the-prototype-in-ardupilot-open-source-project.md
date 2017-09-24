@@ -44,5 +44,3 @@ See, ardupilot stabilization mode is on:)
 [bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI1MTY3Mg==.html?spm=a2hzp.8244740.0.0"]
 
 [bithollow_video locale="Global" url="https://vimeo.com/234263896"]
-
----
