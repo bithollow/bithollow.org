@@ -13,7 +13,9 @@ post_date: 2015-07-18 19:47:39
 ---
 The ardupilot software is almost done by the code, there are existing support for MPU6050, MS5611, HMC5883L and Ublox serial GNSS. What I did was to add a new "board" in the build system of ardupilot, specify the drivers the prototype that depends on.
 
-After clean the code, and make a "decent" board, I guess we can merge the source code into upstream, so we could announce the official support of ardupilot.
+
+
+<blockquote>After clean the code, and make a "decent" board, I guess we can merge the source code into upstream, so we could announce the official support of ardupilot.</blockquote>
 
 ### Prototype with GPS ###
 
