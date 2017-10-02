@@ -21,7 +21,7 @@ These days, we forked ardupilot open source project from [upstream](https://gith
 
 MPU6050 attached to I2C, seems we could improve the I2C performance.
 
-[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI0NzUwMA==.html?spm=a2hzp.8244740.0.0#paction"]
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI0NzUwMA==.html"]
 
 [bithollow_video locale="Global" url="https://vimeo.com/234263663"]
 
@@ -31,7 +31,7 @@ MPU6050 attached to I2C, seems we could improve the I2C performance.
 
 Only one ESC single ware was connected, just precaution!
 
-[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI1MDgxNg==.html?spm=a2hzp.8244740.0.0"]
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI1MDgxNg==.html"]
 
 [bithollow_video locale="Global" url="https://vimeo.com/234263859"]
 
@@ -41,6 +41,6 @@ Only one ESC single ware was connected, just precaution!
 
 See, ardupilot stabilization mode is on:)
 
-[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI1MTY3Mg==.html?spm=a2hzp.8244740.0.0"]
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzAzMDI1MTY3Mg==.html"]
 
 [bithollow_video locale="Global" url="https://vimeo.com/234263896"]
