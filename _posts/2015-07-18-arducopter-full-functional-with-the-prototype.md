@@ -13,9 +13,11 @@ post_date: 2015-07-18 19:47:39
 ---
 The ardupilot software is almost done by the code, there are existing support for MPU6050, MS5611, HMC5883L and Ublox serial GNSS. What I did was to add a new "board" in the build system of ardupilot, specify the drivers the prototype that depends on.
 
+
+
 <blockquote>After clean the code, and make a "decent" board, I guess we can merge the source code into upstream, so we could announce the official support of ardupilot.</blockquote>
 
-<h3>Prototype with GPS</h3>
+### Prototype with GPS ###
 
 Bought a Ublox NEO 6 GPS, so it could switch to almost all the ardupilot flight modes. Loiter mode looks quite stable in the wind.
 
@@ -23,7 +25,7 @@ Bought a Ublox NEO 6 GPS, so it could switch to almost all the ardupilot flight 
 
 [bithollow_video locale="Global" url="https://vimeo.com/139907305"]
 
-<h3>RTL, return to land, very precise, error less in one feet</h3>
+### RTL, return to land, very precise, error less in one feet ###
 
 Flying loiter mode for a while, switch to RTL, more than expected!
 
