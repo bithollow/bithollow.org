@@ -29,7 +29,7 @@ Good, it is actually flying, although the monment is short, but flying. I feel a
 
 ### Default PID bouncing ###
 
-[bithollow_video locale="China" url="http://v.youku.com/v_show/id_XMzA0MTY5NzA2NA==.html"]
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzA0MTY5NzA2NA==.html"]
 
 [bithollow_video locale="Global" url="https://vimeo.com/235123982"]
 
@@ -37,6 +37,6 @@ Good, it is actually flying, although the monment is short, but flying. I feel a
 
 ### PID adjusting ###
 
-[bithollow_video locale="China" url="http://v.youku.com/v_show/id_XMzA0MTcwMDI4OA==.html"]
+[bithollow_video locale="China" url="https://v.youku.com/v_show/id_XMzA0MTcwMDI4OA==.html"]
 
 [bithollow_video locale="Global" url="https://vimeo.com/235124017"]
