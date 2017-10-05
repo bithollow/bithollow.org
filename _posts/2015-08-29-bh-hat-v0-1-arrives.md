@@ -9,7 +9,7 @@ permalink: >
 published: true
 post_date: 2015-08-29 22:42:24
 ---
-Hey! BH HAT, BH board, BH Pilot, all the same thing! It finally arrived, although as test sample.
+Hey! **BH HAT**, **BH board**, **BH Pilot**, all the same thing! It finally arrived, although as test sample.
 
 The PCB layout looks beautiful, thanks to our supplier. However, inevitably, we have to fly jumper wires due to some mistakes in the schematic. Totally three sample boards were made, I believe that one day they will be put into a crystal box, as the permanent commemoration of our small group.
 
