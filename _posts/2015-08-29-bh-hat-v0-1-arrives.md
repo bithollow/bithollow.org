@@ -14,3 +14,5 @@ Hey! **BH HAT**, **BH board**, **BH Pilot**, all the same thing! It finally arri
 The PCB layout looks beautiful, thanks to our supplier. However, inevitably, we have to fly jumper wires due to some mistakes in the schematic. Totally three sample boards were made, I believe that one day they will be put into a crystal box, as the permanent commemoration of our small group.
 
 **BH** is perfectly fit into Raspberry Pi 2, can't wait to see them flying...
+
+Wow!
