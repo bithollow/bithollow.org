@@ -43,6 +43,6 @@ BH Pilot is a HAT of Raspberry Pi 2/3, together they are capable of piloting dro
 
 #### Dimensions ####
 - L * W * H: 65mm * 56.5mm * 20mm (including pin heads)
-- 25g (including battery)
+- Weight: 25g (including battery)
 
 **Notice: Raspberry Pi in photos are not included.**
