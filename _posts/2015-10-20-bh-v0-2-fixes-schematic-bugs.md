@@ -11,7 +11,7 @@ post_date: 2015-10-20 00:31:06
 ---
 Here comes the **BH Pilot** v0.2, fixed several bugs related to the schematic. Furthermore, we introduced the following enhencements:
 
-- Replaced MPU6050 and HMC5883L to MPU9250. MPU9250 is the successor of MPU9250, it features Accelerometer, Gyroscope and Magnetometer all in one together. So we could remove HMC5883L for cost and software maintenance.
+- Replaced MPU6050 and HMC5883L to MPU9250. MPU9250 is the successor of MPU6050, it features Accelerometer, Gyroscope and Magnetometer all in one together. So we could remove HMC5883L for cost and software maintenance.
 
 - Added a DIP switch. **BH** isn't for Raspberry Pi only, on other development board, such as Beagle series, Banana Pi series or Arduino series, DIP switch could effectively maintain hardware configurations.
 
