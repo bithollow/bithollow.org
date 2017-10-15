@@ -9,4 +9,4 @@ permalink: >
 published: true
 post_date: 2015-12-20 00:34:33
 ---
-**BH Pilot** has been supported in ardupilot source code, officially it was merged to ardupilot upstream in github.
+**BH Pilot** has been supported in [ardupilot](https://github.com/ArduPilot/ardupilot) source code, officially it was merged to ardupilot upstream in github.
