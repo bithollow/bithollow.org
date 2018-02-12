@@ -14,7 +14,7 @@ post_date: 2017-02-14 07:46:16
 [/span4]
 [span8]
 <h4>Authors and Contributors</h4>
-April 2015, Aaron Wang Shi (<a href="https://github.com/onceme">@onceme</a>), Cao Fei (<a href="https://github.com/droneboost">@droneboost</a>), Li Wei Feng (<a href="https://github.com/muzi-15">@muzi-15</a>) started BitHollow, don’t look down upon them, they might be the rulers of this galaxy in the upcoming 50 years.
+April 2015, Aaron Wang Shi (<a href="https://github.com/onceme">@onceme</a>), Cao Fei (<a href="https://github.com/droneboost">@droneboost</a>), Li Wei Feng (<a href="https://github.com/muzi-15">@muzi-15</a>) started BitHollow.
 <h4>Support or Contact</h4>
 Report issues of BH <a href="https://github.com/bithollow/manifests/issues">here</a>, the <a href="https://github.com/bithollow/bithollow.github.io/wiki">wiki</a> for developer and users
 [/span8]
