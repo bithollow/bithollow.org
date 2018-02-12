@@ -21,7 +21,3 @@ It features all the upstream improvements and bug fixes, have fun!
 ---
 
 [Go to download page](https://bithollow.github.io/downloads/ardupilot-prebuilt/2017/08/11/ardupilot_v3.5-dev_copter)
-
-[bithollow_video locale="China" url="http://v.youku.com/v_show/id_XMzI4NDc3NjEyOA==.html"]
-
-[bithollow_video locale="Global" url="https://vimeo.com/249356200"]
