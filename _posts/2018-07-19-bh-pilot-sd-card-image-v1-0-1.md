@@ -27,7 +27,7 @@ post_date: 2018-07-19 10:24:13
 
 - This image enabled hotspot AP by default, on your ground control station, search ssid `bithollow-bh`, default password is `bithollow`. Its dhcp server will dynamically assign client ip in the pool: `10.0.0.2~10.0.0.253`, lease time 12 hours.
 
-   MAVLink message from ardupilot will be broadcasted to each of the leased client ip, thus you could have multiple GCS as clients to monitor ardupilot status.
+  MAVLink message from ardupilot will be broadcasted to each of the leased client ip, thus you could have multiple GCS as clients to monitor ardupilot status.
 
 - To config the hotspot AP, access `10.0.0.1` in your web broswer, user: `bit`, password: `hollow`
 
