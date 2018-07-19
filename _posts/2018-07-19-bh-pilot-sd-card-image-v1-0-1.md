@@ -25,27 +25,6 @@ post_date: 2018-07-19 10:24:13
 
 ---
 
-The sd card image split into several parts because the host limited the largest file size.
-
-The following instrustions assumes:
-
-- To download and join the parts under Linux (about 167MB)
-- Your Raspberry Pi sd card is the device '**/dev/mmcblk0**' (change the device name according to your system)
-
-1. Download `rpi.img.xz.part00`~`rpi.img.xz.part02` to a directory
-2. In the above directory, join the parts together
-  ```shell
-  $ cat rpi.img.xz.* > rpi.img.xz
-  ```
-3. Write sd card
-  ```shell
-  $ sudo sh -c 'xzcat rpi.img.xz > /dev/mmcblk0'
-  $ sync
-  ```
-4. Plug the sd card to Raspberry Pi, power on. It is for Raspberry Pi 3 only (all models)
-
----
-
 - This image enabled hotspot AP by default, on your ground control station, search ssid `bithollow-bh`, default password is `bithollow`. Its dhcp server will dynamically assign client ip in the pool: `10.0.0.2~10.0.0.253`, lease time 12 hours.
 
    MAVLink message from ardupilot will be broadcasted to each of the leased client ip, thus you could have multiple GCS as clients to monitor ardupilot status.
