@@ -44,7 +44,8 @@ The following instrustions assumes:
   ```
 4. Plug the sd card to Raspberry Pi, power on. It is for Raspberry Pi 3 only (all models)
 
-### note
+---
+
 - This image enabled hotspot AP by default, on your ground control station, search ssid `bithollow-bh`, default password is `bithollow`. Its dhcp server will dynamically assign client ip in the pool: `10.0.0.2~10.0.0.253`, lease time 12 hours.
 
    MAVLink message from ardupilot will be broadcasted to each of the leased client ip, thus you could have multiple GCS as clients to monitor ardupilot status.
