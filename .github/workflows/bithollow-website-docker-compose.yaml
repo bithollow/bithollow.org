@@ -9,11 +9,8 @@ on:
 
 jobs:
   deploy:
-    runs-on: [self-hosted, bithollow]
+    runs-on: bithollow
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
       - name: Update docker images
         run: |
           echo "Starting monthly Bithollow deployment..."
