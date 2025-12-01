@@ -1,2 +1,2 @@
-# bithollow.com
+# bithollow.org
 Website version control
