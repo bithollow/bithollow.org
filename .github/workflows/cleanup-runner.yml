@@ -1,59 +1,58 @@
-name: Cleanup and Update Runner Links
+name: Runner Maintenance
 
 on:
   schedule:
-    # On every Monday UTC 16:00
+    # Every Monday at 16:00 UTC
     - cron: '0 16 * * 1'
-  workflow_dispatch: # Allow manually triggering
+  workflow_dispatch:
 
 jobs:
-  update-links:
+  maintenance:
     runs-on: bithollow
-    
     steps:
-      - name: Update Runner Symlinks and Cleanup
+      - name: Update Symlinks and Cleanup
         run: |
-          # Enter runner installation directory
-          cd $GITHUB_WORKSPACE/.. 
+          # 1. Navigate to the runner installation root
+          # From _work/repo/repo up to root
+          cd ../../
           
-          echo "Starting cleanup process in $(pwd)..."
+          echo "Operating in: $(pwd)"
 
-          # 1. Obtain the latest bin and externals directories
-          NEW_BIN=$(ls -vd bin.[0-9]* | tail -n 1)
-          NEW_EXT=$(ls -vd externals.[0-9]* | tail -n 1)
+          # 2. Identify the latest versioned directories
+          LATEST_BIN=$(ls -vd bin.[0-9]* 2>/dev/null | tail -n 1)
+          LATEST_EXT=$(ls -vd externals.[0-9]* 2>/dev/null | tail -n 1)
           
           CURRENT_BIN=$(readlink bin)
           CURRENT_EXT=$(readlink externals)
 
-          echo "Latest found: $NEW_BIN and $NEW_EXT"
-          echo "Currently linked to: $CURRENT_BIN and $CURRENT_EXT"
+          RESTART_REQUIRED=false
 
-          # 2. Check if synbolic links need to be updated
-          if [ "$NEW_BIN" != "$CURRENT_BIN" ] || [ "$NEW_EXT" != "$CURRENT_EXT" ]; then
-            echo "New version detected. Updating symlinks..."
-            
-            # Stop runner service
-            sudo ./svc.sh stop || true
-            
-            # Update synbolic links
-            ln -sfn "$NEW_BIN" bin
-            ln -sfn "$NEW_EXT" externals
-            
-            # Start runner service
-            sudo ./svc.sh start
+          # 3. Force symlink update if outdated
+          if [ -n "$LATEST_BIN" ] && [ "$LATEST_BIN" != "$CURRENT_BIN" ]; then
+              echo "Fixing bin link: $CURRENT_BIN -> $LATEST_BIN"
+              ln -sfn "$LATEST_BIN" bin
+              RESTART_REQUIRED=true
+          fi
+
+          if [ -n "$LATEST_EXT" ] && [ "$LATEST_EXT" != "$CURRENT_EXT" ]; then
+              echo "Fixing externals link: $CURRENT_EXT -> $LATEST_EXT"
+              ln -sfn "$LATEST_EXT" externals
+              RESTART_REQUIRED=true
+          fi
+
+          # 4. Cleanup old versions and update artifacts
+          echo "Purging old versions..."
+          ls -vd bin.[0-9]* 2>/dev/null | grep -v "$LATEST_BIN" | xargs rm -rf
+          ls -vd externals.[0-9]* 2>/dev/null | grep -v "$LATEST_EXT" | xargs rm -rf
+          
+          [ -d "_work/_update" ] && echo "Removing _work/_update" && rm -rf _work/_update
+
+          # 5. Handle Restart using setsid (Dash compatible)
+          if [ "$RESTART_REQUIRED" = "true" ]; then
+              echo "Restarting runner service in a new session..."
+              # setsid runs the command in a new session, detaching it from the current shell
+              setsid sh -c 'sleep 5; ./svc.sh stop; sleep 2; ./svc.sh start' > maintenance_restart.log 2>&1 &
+              echo "Restart sequence backgrounded. Job finishing."
           else
-            echo "Already on the latest version. Skipping symlink update."
+              echo "No version changes detected."
           fi
-
-          # 3. Clearup the older versions
-          echo "Cleaning up old version directories..."
-          ls -vd bin.* | grep -v "$NEW_BIN" | xargs rm -rf
-          ls -vd externals.* | grep -v "$NEW_EXT" | xargs rm -rf
-
-          # 4. Remove temporary update directory
-          if [ -d "_work/_update" ]; then
-            echo "Removing _work/_update directory..."
-            rm -rf _work/_update
-          fi
-
-          echo "Cleanup complete."
