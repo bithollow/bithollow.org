@@ -1,0 +1,59 @@
+name: Cleanup and Update Runner Links
+
+on:
+  schedule:
+    # On every Monday UTC 16:00
+    - cron: '0 16 * * 1'
+  workflow_dispatch: # Allow manually triggering
+
+jobs:
+  update-links:
+    runs-on: bithollow
+    
+    steps:
+      - name: Update Runner Symlinks and Cleanup
+        run: |
+          # Enter runner installation directory
+          cd $GITHUB_WORKSPACE/.. 
+          
+          echo "Starting cleanup process in $(pwd)..."
+
+          # 1. Obtain the latest bin and externals directories
+          NEW_BIN=$(ls -vd bin.[0-9]* | tail -n 1)
+          NEW_EXT=$(ls -vd externals.[0-9]* | tail -n 1)
+          
+          CURRENT_BIN=$(readlink bin)
+          CURRENT_EXT=$(readlink externals)
+
+          echo "Latest found: $NEW_BIN and $NEW_EXT"
+          echo "Currently linked to: $CURRENT_BIN and $CURRENT_EXT"
+
+          # 2. Check if synbolic links need to be updated
+          if [ "$NEW_BIN" != "$CURRENT_BIN" ] || [ "$NEW_EXT" != "$CURRENT_EXT" ]; then
+            echo "New version detected. Updating symlinks..."
+            
+            # Stop runner service
+            sudo ./svc.sh stop || true
+            
+            # Update synbolic links
+            ln -sfn "$NEW_BIN" bin
+            ln -sfn "$NEW_EXT" externals
+            
+            # Start runner service
+            sudo ./svc.sh start
+          else
+            echo "Already on the latest version. Skipping symlink update."
+          fi
+
+          # 3. Clearup the older versions
+          echo "Cleaning up old version directories..."
+          ls -vd bin.* | grep -v "$NEW_BIN" | xargs rm -rf
+          ls -vd externals.* | grep -v "$NEW_EXT" | xargs rm -rf
+
+          # 4. Remove temporary update directory
+          if [ -d "_work/_update" ]; then
+            echo "Removing _work/_update directory..."
+            rm -rf _work/_update
+          fi
+
+          echo "Cleanup complete."
