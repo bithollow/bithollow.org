@@ -42,8 +42,8 @@ jobs:
 
           # 4. Cleanup old versions and update artifacts
           echo "Purging old versions..."
-          ls -vd bin.[0-9]* 2>/dev/null | grep -v "$LATEST_BIN" | xargs rm -rf
-          ls -vd externals.[0-9]* 2>/dev/null | grep -v "$LATEST_EXT" | xargs rm -rf
+          ls -vd bin.[0-9]* 2>/dev/null | grep -v "$LATEST_BIN" | xargs -r rm -rf || true
+          ls -vd externals.[0-9]* 2>/dev/null | grep -v "$LATEST_EXT" | xargs -r rm -rf || true
           
           [ -d "_work/_update" ] && echo "Removing _work/_update" && rm -rf _work/_update
 
