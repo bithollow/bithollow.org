@@ -9,18 +9,15 @@ jobs:
   maintenance:
     runs-on: bithollow
     steps:
-      - name: 1. Identify and Update Symlinks
+      - name: Identify and Update Symlinks
         id: check_version
         run: |
-          ls -l
           cd ../../../
-          ls -l
           LATEST_BIN=$(ls -vd bin.[0-9]* 2>/dev/null | tail -n 1)
           LATEST_EXT=$(ls -vd externals.[0-9]* 2>/dev/null | tail -n 1)
-          echo 0
+
           CURRENT_BIN=$(readlink bin)
           CURRENT_EXT=$(readlink externals)
-          echo 1
 
           UPDATED="false"
 
@@ -29,22 +26,19 @@ jobs:
               ln -sfn "$LATEST_BIN" bin
               UPDATED="true"
           fi
-          echo 2
 
           if [ -n "$LATEST_EXT" ] && [ "$LATEST_EXT" != "$CURRENT_EXT" ]; then
               echo "Updating externals link to $LATEST_EXT"
               ln -sfn "$LATEST_EXT" externals
               UPDATED="true"
           fi
-          echo 3
 
           # Export variable for subsequent steps
           echo "updated=$UPDATED" >> $GITHUB_OUTPUT
           echo "latest_bin=$LATEST_BIN" >> $GITHUB_OUTPUT
           echo "latest_ext=$LATEST_EXT" >> $GITHUB_OUTPUT
-          echo 4
 
-      - name: 2. Cleanup Old Directories
+      - name: Cleanup Old Directories
         run: |
           cd ../../../
           LATEST_BIN="${{ steps.check_version.outputs.latest_bin }}"
@@ -60,7 +54,7 @@ jobs:
               rm -rf _work/_update
           fi
 
-      - name: 3. Detached Service Restart
+      - name: Detached Service Restart
         if: steps.check_version.outputs.updated == 'true'
         run: |
           cd ../../../
