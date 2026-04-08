@@ -62,6 +62,6 @@ jobs:
           
           # Use nohup with full redirection to detach from dash/sh
           # The inner shell ensures the sequence continues after the runner stops
-          nohup sh -c 'sleep 5; ./svc.sh stop; sleep 2; ./svc.sh start' > maintenance.log 2>&1 &
+          sudo nohup sh -c 'sleep 5; ./svc.sh stop; sleep 2; ./svc.sh start' > maintenance.log 2>&1 &
           
           echo "Restart command backgrounded. Disconnecting now."
